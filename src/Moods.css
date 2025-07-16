@@ -1,0 +1,275 @@
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-image: linear-gradient(90deg, #EBF2FC 0%, #EEF8F9 100%);
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 16px;
+    }
+    body.dark-mood{
+        background-image: linear-gradient(90deg, #040918 0%, #091540 100%);
+    }
+    .external-continer{
+        margin: 0 auto;
+        padding: 3em 10em;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        background-color: hsl(200, 60%, 99%);
+        padding: 1em;
+        border-radius: 20px;
+        margin-bottom: 3em;
+    }
+    body.dark-mood nav{
+        background-color: hsla(0, 0%, 100%, 0.698);
+    }
+    nav button {
+        padding: 0.4em;
+        border-radius: 15px;
+        border: none;
+        cursor: pointer;
+    }
+    nav button img{
+        padding: 0.5em;
+    }
+    nav button:focus{
+        outline:  2px solid hsl(3, 77%, 44%);
+    }
+    body.dark-mood nav button:hover{
+        background-color: hsl(227, 75%, 14%)
+    }
+    nav button:hover{
+        background-color: hsl(0, 0%, 78%);
+    }
+
+
+
+    .menu{
+        display: flex;
+        justify-content: space-between;
+    }
+    body.dark-mood .menu h1{
+        color: white;
+    }
+    .menu h1{
+        color: hsl(227, 75%, 14%);
+        font-weight: 900;
+    }
+    .btn-states{
+        width: 100%;
+        max-width: 300px;
+        max-height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    body.dark-mood .btn-states button{
+        color:white;
+        background-color: hsl(225, 23%, 24%);
+        ;
+    }
+    .btn-states button{
+        padding: 1em 1.5em;
+        border-radius: 25px;
+        border: 1px solid hsla(226, 11%, 37%,0.4) ;
+        cursor: pointer;
+        color: hsl(226, 25%, 17%);
+        background-color: hsl(200, 60%, 99%);
+        font-weight: 500;
+        font-size: 1.1em;
+    }
+    body.dark-mood .btn-states button:focus{
+        color: hsl(226, 25%, 17%);
+         background-color: hsl(3, 71%, 56%);
+    }
+    .btn-states button:focus{
+        background-color: hsl(3, 71%, 56%);
+        color: hsl(200, 60%, 99%);
+    }
+    .main-div{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    body.dark-mood .individual-card{
+        background-color: hsl(226, 25%, 17%);
+        box-shadow:none;
+        border: 0.5px solid hsl(226, 11%, 37%);
+        
+    }
+    .individual-card{
+        background-color: hsl(200, 60%, 99%);
+        margin: 1em;
+        padding: 1em;
+        width: 100%;
+        max-width: calc((100% - 1em )/3.22);
+        border-radius: 15px ;
+        box-shadow: 1px 1px 10px 0px hsl(0, 0%, 78%);
+        border: 0.5px solid hsl(217, 61%, 90%);
+    }
+    body.dark-mood .individual-card div:first-of-type{
+        color: white;
+    }
+    .individual-card div:first-of-type{
+        display: flex;
+        align-items: flex-start;
+        color: hsl(227, 75%, 14%);
+    }
+
+    .individual-card div:first-of-type img{
+        margin-right: 15px;
+    }
+    body.dark-mood .individual-card div:first-of-type p{
+        color: hsla(0, 0%, 78%, 0.633);
+    }
+    .individual-card div:first-of-type p{
+        color:hsl(226, 11%, 37%);
+        margin-top: 5px;
+    }
+    .active-remove-btn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2em;
+    }
+    body.dark-mood  .active-remove-btn button{
+        color: white ;
+        background-color: hsl(226, 25%, 17%);
+        border: 1px solid hsl(226, 11%, 37%);
+    }
+    .active-remove-btn button{
+        padding: 10px 20px;
+        border: 2px solid hsl(0, 0%, 78%); 
+        color: hsl(227, 75%, 14%) ; 
+        background-color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: 500;
+    }
+    body.dark-mood .active-remove-btn button:focus{
+        background-color:  hsl(3, 77%, 44%);
+        color:hsl(227, 75%, 14%);
+        outline: none;
+    }
+    .active-remove-btn button:focus{
+        outline: 2px solid  hsl(3, 77%, 44%); 
+        background-color: hsla(0, 0%, 78%,0.4);
+        color: hsl(227, 75%, 14%);
+    }
+
+    .active-remove-btn button:hover{
+        background-color: hsl(3, 77%, 44%);
+        color: white;
+    }
+    body.dark-mood .checkBox {
+        background-color: hsl(226, 11%, 37%);
+    }
+    .checkBox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 46px;
+    height: 24px;
+    background-color: hsl(0, 0%, 78%);
+    border-radius: 34px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    }
+
+    .checkBox::before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    }
+ 
+    .checkBox:checked,body.dark-mood .checkBox:checked {
+    background-color: hsl(3, 77%, 44%);
+    }
+    .checkBox:focus {
+    outline: 2px solid hsl(3, 77%, 44%) ;
+    
+    }
+    .checkBox:checked::before {
+    transform: translateX(22px);
+    }
+
+    /* Media Queary */
+    /* First Mobile */
+    @media screen and (max-width: 600px) {
+        .external-continer{
+            padding: 1em 1.8em;
+        }
+        nav{
+            width: 100%;
+            max-width: 90%;
+            margin: 0 auto 1em;
+            
+        }
+        .menu{
+            margin: 0 auto 1.5em;
+            flex-direction: column;
+            align-items: center;
+        }
+        .btn-states{
+        width: 100%;
+        max-width: 450px;
+        max-height: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 1em;
+    }
+    .main-div{
+        flex-direction: column;
+        align-items: center;
+    }
+        .individual-card{
+            width: 100%;
+            max-width: 75%;
+        }
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 1200px) {
+        .external-continer{
+            padding: 1.5em 2em;
+        }
+        nav{
+            width: 100%;
+            max-width: 90%;
+            margin: 0 auto 1.5em;
+            
+        }
+        .menu{
+            margin: 0 auto 2em;
+            flex-direction: column;
+            align-items: center;
+        }
+        .btn-states{
+        width: 100%;
+        max-width: 600px;
+        max-height:  100px;
+        margin-top: 0.5em;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .main-div{
+        flex-direction: column;
+        align-items: center;
+    }
+        .individual-card{
+            width: 100%;
+            max-width: 70%;
+        }
+    }
+
