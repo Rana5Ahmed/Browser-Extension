@@ -1,17 +1,19 @@
-
+    import logo from '../public/assets/images/logo.svg'
+    import moonIcon from '../public/assets/images/icon-moon.svg';
+    import sunIcon from '../public/assets/images/icon-sun.svg';
     function NavBar() {
         let clicked = false;
         function changeMood() {
             let iconChange = document.getElementById("icon")
             clicked = ! clicked
             if (clicked === true) {
-                iconChange.src = "/Browser-Extension/assets/images/icon-sun.svg";
+                iconChange.src = {sunIcon};
                  document.body.classList.add("dark-mood")
                  document.body.classList.remove("light-mood")
                 
             }
             else{
-                iconChange.src = "/Browser-Extension/assets/images/icon-moon.svg";
+                iconChange.src = {moonIcon};
                 document.body.classList.add("light-mood")
                 document.body.classList.remove("dark-mood")
 
@@ -23,8 +25,8 @@
         return(
             <>
             <nav>
-                <img src="/Browser-Extension/assets/images/logo.svg" alt="Main-Logo" />
-                <button> <img src="/Browser-Extension/assets/images/icon-moon.svg" alt="Moon-Icon" id="icon" onClick={changeMood}/></button>
+                <img src={logo} alt="Main-Logo" />
+                <button> <img src={moonIcon} alt="Moon-Icon" id="icon" onClick={changeMood}/></button>
             </nav>
             
             </>

@@ -1,4 +1,5 @@
     import React from "react";
+    import * as images from './images.js';
 
     function Card({ prop, isActive, onCheck,onRemove }) {
     function handleCheckboxChange(e) {
@@ -7,12 +8,12 @@
         function handleRemoveClick() {
             onRemove(prop);
     }
-
+    const logoSrc = images[prop.logo];
     return (<>
         <div className="individual-card">
         <div>
         <div>
-        <img src={prop.logo} alt={prop.name} />
+        <img src={logoSrc} alt={prop.name} />
         </div>
         <div>
         <h3>{prop.name}</h3>
