@@ -1,14 +1,15 @@
 {
+   "homepage": "https://Rana5Ahmed.github.io/Browser-Extension",
   "name": "browser-extension",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Rana5Ahmed.github.io/Browser-Extension",
-  "scripts": {
+   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist"
+    "predeploy": "npm run build",
+     "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.1.0",
